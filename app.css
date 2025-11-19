@@ -1,0 +1,294 @@
+
+/*
+===================================================================================
+    GLOBAL STYLES
+===================================================================================
+*/
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto') url('/Fonts/Roboto-VariableFont_wdth,wght.ttf');
+}
+
+:root {
+    --cBackgroundGameOne: #121224;
+    --cBackground: #191a2e;
+    --color: #f1f0f0;
+    --cShadow: #8671dd;
+    --cShadowOne: #E0476B;
+    --cBorder: #04bef2;
+}
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: var(--color);
+}
+
+body {
+    background-color: var(--cBackground);
+}
+
+
+.app {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*
+===================================================================================
+    INTERFACE STYLES
+===================================================================================
+*/
+
+
+.t {
+    margin: 10px 0;
+    h1 {
+        text-align: center;
+        text-shadow: 
+        0 0 5px var(--cShadow),
+        0 0 10px var(--cShadow),
+        0 0 15px var(--cShadow),
+        0 0 20px var(--cShadow);
+    }
+}
+
+.cont {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.gameOne,
+.gameTwo {
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 400px;
+    height: 300px;
+    border: 2px solid var(--cBorder);
+    h2 {
+        margin: 12px 24px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    p {
+        margin: 12px 24px;
+        text-align: center;
+    }
+}
+
+.gameOne:hover {
+    border-color: #121212;
+    background-color: #121224;
+    box-shadow: 
+    0 0 10px var(--cShadowOne),
+    0 0 20px var(--cShadowOne),
+    0 0 30px var(--cShadowOne);
+    h2 {
+        text-shadow: 
+        0 0 5px var(--cShadowOne),
+        0 0 10px var(--cShadowOne),
+        0 0 15px var(--cShadowOne),
+        0 0 20px var(--cShadowOne),
+        0 0 25px var(--cShadowOne);
+    }
+}
+
+/*
+===================================================================================
+    GAME ONE STYLES
+===================================================================================
+*/
+
+
+.back {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: var(--cBackgroundGameOne);
+    border: 2px solid var(--cShadow);
+    border-radius: 8px;
+    transition: 
+    color 0.7s ease,
+    border 0.7s ease,
+    box-shadow 0.7s ease,
+    background-color 0.7s ease;
+}
+.back:hover {
+    border: 1px solid var(--cShadowOne);
+    box-shadow: 0 0 10px var(--cShadowOne);
+    background-color: var(--cShadowOne);
+    color: var(--color);
+}
+
+.tabContainer {
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bot,
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+.score {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.tab {
+    min-width: 350px;
+    height: 600px;
+    border: 1px solid var(--cShadow);
+    h2 {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+.cardMarco {
+    padding: 5px;
+    width: 100px;
+    height: 150px;
+    border: 1px solid var(--cBorder);
+    border-radius: 5px;
+    background-color: var(--color);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--cBorder);
+    border-radius: 5px;
+    p {
+        font-size: 50px;
+        text-align: center;
+        margin-top: 40px ;
+    }
+}
+
+.cardH {
+    background: url('./assets/caed.jpg') no-repeat center / cover;
+    border: none;
+}
+
+
+/*
+===================================================================================
+GAME TWO STYLES
+===================================================================================
+*/
+
+.vs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 800px;
+    border: 1px solid var(--cBorder);
+    border-radius: 10px;
+}
+
+.op {
+    width: 100px;
+    height: 100px;
+    border: 2PX solid var(--cBorder);
+    border-radius: 50%;
+}
+
+
+/*
+===================================================================================
+    MOBILE MODE
+===================================================================================
+*/
+
+@media (max-width: 425px) {
+
+    .app {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .cont {
+        margin: 0 auto;
+        width: 90%;
+        height: 750px;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .gameOne,
+    .gameTwo {
+        width: 90%;
+        height: 250px;
+    }
+
+    .tabContainer {
+        min-width: 350px;
+        flex-direction: column;
+    }
+    
+    .bot,
+    .user {
+        min-width: 350px;
+        flex-direction: column;
+        h2{
+            height: auto;
+        }
+        div{
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+
+    .card {
+        p {
+            width: 100%;
+            font-size: 30px;
+            margin-top: 25px ;
+        }
+    }
+    
+    .tab {
+        min-width: 350px;
+    }
+
+    .cardMarco {
+        width: 75px;
+        height: 100px;
+    }
+
+}
