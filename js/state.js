@@ -29,3 +29,35 @@ export class State {
         this.events.forEach( callback => callback( this.value ) );
     }
 }
+
+export class StateGameOne {
+    static intance = null;
+
+    scoreBot = 0;
+    scoreUser = 0;
+    
+
+    constructor () {
+        if ( State.intance) {
+            return StateGameOne.intance;
+        }
+        StateGameOne.intance = this;
+    }
+
+    get scoreBot () {
+        return this.scoreBot;
+    }
+
+    get scoreUser () {
+        return this.scoreUser;
+    }
+
+    setBot () {
+        this.scoreBot += 1;
+    }
+
+    setUser () {
+        this.scoreUser += 1;
+    }
+
+}

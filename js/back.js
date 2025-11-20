@@ -4,7 +4,7 @@ export function back (element) {
     <div class="app">
     
     <header class="t">
-        <h1> Proyecto 1 </h1>
+        <h1> Zero Sum </h1>
     </header>
     
     <main class="cont">
