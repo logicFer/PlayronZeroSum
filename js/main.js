@@ -2,7 +2,7 @@
 import { back } from './back.js';
 import { renderGameOne } from './Game/gameOne/gameOne.js';
 import { renderGameTwo } from './Game/gameTwo/gameTwo.js';
-import { State } from './state.js'
+import { score, State } from './state.js'
 
 const stateGlobal = new State();
 const d = document;
@@ -41,6 +41,13 @@ d.addEventListener('click', (e) => {
 
     if ( t.closest( '.gameTwo')){
         stateGlobal.set(2);
+        return
+    }
+
+    if ( t.closest( '.papel')){
+        d.body.style.backgroundColor= 'var(--cShadow)';
+        score.setUser()
+        console.log('hola pwrras')
         return
     }
 

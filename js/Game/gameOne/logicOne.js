@@ -3,15 +3,18 @@ import { cards } from "./renderOneUI.js";
 const options = [
     {
         "id": 1,
-        "value": "✌️"
+        "value": "../../../assets/tijeras.png",
+        "comparativo": "tijeras"
     },
     {
         "id": 2,
-        "value": "✋"
+        "value": "../../../assets/papel.png",
+        "comparativo": "papel"
     },
     {
         "id": 3,
-        "value": "👊"
+        "value": "../../../assets/piedra.png",
+        "comparativo": "piedra"
     }
 ]
 
@@ -40,7 +43,7 @@ function renderCards ( element , h = false ) {
     const cValue = assignValues();
 
     cValue.forEach( (it) => {
-        element.innerHTML += cards( it.value, h );
+        element.innerHTML += cards( it.value, h ,it.comparativo );
     });
     
     return
